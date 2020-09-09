@@ -6,7 +6,7 @@
 </head>
 <body>
 	<fieldset>
-		<legend align="center"><h1>-:Student Registration Form:-</h1></legend>
+		<legend align="center"><h1>-:Registration Form:-</h1></legend>
 			<form action="" >
 				<label for="name">Name:</label></br>
 				<input type="text" name="name"/><br/>
