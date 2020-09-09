@@ -7,7 +7,7 @@
 <body>
 	<fieldset>
 		<legend align="center"><h1>-:Registration Form:-</h1></legend>
-			<form action="" >
+			<form action="controller/registrationControl.php" method="POST" enctype="multipart/form-data">
 				<label for="name">Name:</label></br>
 				<input type="text" name="name"/><br/>
 				<label for="address">Address:</label></br>
