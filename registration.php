@@ -13,10 +13,11 @@
 				<label for="address">Address:</label></br>
 				<textarea name="add" id="" cols="22" rows="5"></textarea><br/>
 				<label for="gender">Gender:</label></br>
-				<input type="radio" name="male" value="male"/>MALE
-				<input type="radio" name="female" value="female"/>FEMALE<br/>
+				<input type="radio" name="gender" value="male"/>MALE
+				<input type="radio" name="gender" value="female"/>FEMALE<br/>
 				<label for="city">City: </label></br>
 				<select name="city" id="">
+					<option selected disabled>Choose one</option>
 					<option value="DHAKA">DHAKA</option>
 					<option value="CHITTAGONG">CHITTAGONG</option>
 					<option value="KHULNA">KHULNA</option>
