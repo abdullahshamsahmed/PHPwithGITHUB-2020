@@ -25,6 +25,11 @@
 					<option value="BORISAL">BORISAL</option>
 					<option value="SYLHET">SYLHET</option>
 				</select><br/>
+				<label for="color">Reminder color:</label></br>
+				<input type="checkbox" name="color[]" value="red"/> RED
+				<input type="checkbox" name="color[]" value="black"/> BLACK
+				<input type="checkbox" name="color[]" value="green"/> Green
+				<br/>
 				<label for="DOB">DOB:</label></br>
 				<input type="date" name="DOB" /><br/>
 				<label for="pass">Password:</label></br>
