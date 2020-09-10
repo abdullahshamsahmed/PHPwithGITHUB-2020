@@ -8,6 +8,12 @@
 		$add=$_POST['add'];
 		$gender=$_POST['gender'];
 		$city=$_POST['city'];
+		
+		//<checkbox>
+		$colorcheck = $_POST['color'];
+		$newCheckVal = implode (",",$colorcheck);// multiple value k separate kora hoise "," koma dia 
+		//</checkbox>
+		
 		$DOB=$_POST['DOB'];
 		$pass=$_POST['pass'];
 		$email=$_POST['email'];
@@ -38,7 +44,7 @@
 		}
 		// </image file controller> 
 		
-		$sql="INSERT INTO registration (name,address,gender,city,DOB,password,email,ppic) VALUES ('$name','$add','$gender','$city','$DOB','$pass','$email','$$destinationFile')";
+		$sql="INSERT INTO registration (name,address,gender,city,color,DOB,password,email,ppic) VALUES ('$name','$add','$gender','$city','$newCheckVal','$DOB','$pass','$email','$destinationFile')";
 	
 		if (!mysqli_query($conn,$sql))
 		{
