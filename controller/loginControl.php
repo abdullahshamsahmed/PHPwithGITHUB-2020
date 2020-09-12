@@ -16,7 +16,9 @@
 		}
 		else
 		{
-			echo"wrong";
+			$Message = urlencode("Wrong: Name or Password!!! Try again.");
+			header("Location:../index.php?Message=".$Message);
+			die;
 		}
 		
 	}
