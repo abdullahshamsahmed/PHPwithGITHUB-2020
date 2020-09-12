@@ -23,6 +23,11 @@
 	</fieldset>
 </body>
 </html>
+<?php
+	if(isset($_GET['Message'])){
+		echo $_GET['Message'];
+	}
+?>
 <script type="text/javascript">
 	function myFuction()
 	{
