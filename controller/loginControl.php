@@ -12,7 +12,7 @@
 		
 		if (mysqli_num_rows($result)==1)//mysqli_num_rows() aita check kore j ai result ar konta row ase database a 
 		{
-			header("Location:../curd.php");
+			header("Location:../curd.php?name=".$name);
 		}
 		else
 		{
