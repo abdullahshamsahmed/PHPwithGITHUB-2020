@@ -2,6 +2,7 @@
 	//dbconnection file include 
 	include('../model/dbcon.php');
 	//condition apply
+	
 	if (isset($_POST['submit'])){
 		
 		$name=$_POST['name'];
@@ -23,11 +24,11 @@
 		$fileName = $file['name'];
 		$fileTmp = $file['tmp_name'];
 		
-		// echo "<pre>";//[starting] make print_r function line by line
+		 echo "<pre>";//[starting] make print_r function line by line
 		
-		// print_r($files);// keywords details print out function
+		 print_r($file);// keywords details print out function
 		
-		// echo "</pre>";//[/ending/] make print_r function line by line
+		 echo "</pre>";//[/ending/] make print_r function line by line
 		
 		$fileExt = explode ('.',$fileName);//extention find expolded by "."
 		$fileCheck = strtolower(end($fileExt)); //start to lower : extention name small letter convert
@@ -53,8 +54,8 @@
 		else
 		{
 			echo "Inserted!!!";
-			header("refresh:2; url=../registration.php");
+			header("refresh:1; url=../registration.php");
 		}
 			
-		}
+	}
 ?>

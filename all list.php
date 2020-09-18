@@ -29,7 +29,9 @@ table, th, td {
 		<?php include_once("controller/all list controller.php");?>
 			
 			<?php
+			// include_once __DIR__. --> DIR makes the programme understand how to find the file directory without error
 			include_once __DIR__."/model/dbcon.php";
+			// pagination LIMIT data displaying
 			$sql = "SELECT * FROM registration LIMIT ".$this_page_first_result.",".$results_per_page."";
 			$result = mysqli_query ($conn,$sql);
 				if (mysqli_num_rows ($result)>0)
@@ -71,7 +73,9 @@ table, th, td {
 		</tr>
 	</table>
 	<div align="center">
+	
 		<?php
+		// making pagination serial numbering 
 			for ($page=1;$page<=$number_of_pages;$page++)
 			{
 				echo '<a href="all list.php?page='. $page .'">'. $page .'</a>';

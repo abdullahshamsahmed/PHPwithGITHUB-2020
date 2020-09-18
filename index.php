@@ -15,6 +15,8 @@
 					<input type="password" name="pass" id="myInput"/><br />
 					<input type="checkbox" onclick="myFuction()">Show Password...
 					<a href="#">Forgotten password>>></a>
+					<a href="registration.php">Registration>>></a>
+					
 					<br />
 					<input type="submit" name="submit" value="Login"/>
 				</div>

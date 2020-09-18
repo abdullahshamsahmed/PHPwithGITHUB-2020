@@ -38,7 +38,7 @@
 				<input type="email" name="email" /></br>
 				<label for="ppic">Profile Photo: </label></br>
 				<input type="file" name="image" onchange="document.getElementById('ppic').src=window.URL.createObjectURL(this.files[0])"/><br/>
-				<img id="ppic" alt="file not selected" height="50" width="50"/><br/><br/>
+				<img id="ppic" src="" alt="file not selected" height="50" width="50"/><br/><br/>
 				
 				<input type="submit" value="submit" name="submit"/>
 			</form>
