@@ -1,3 +1,18 @@
+<?php
+	session_start();
+	$cookie_name = "name";
+	$cookie_value = "";
+	if (isset($_POST['name']))
+	{
+		$name = $_POST['name'];
+		if ($name == "admin")
+		{
+			$cookie_value = $name;
+		}
+	}
+	setcookie($cookie_name,$cookie_value,time() +10,"/" );
+	//echo $_COOKIE[$cookie_name];
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -25,6 +40,8 @@
 	</fieldset>
 </body>
 </html>
+
+
 <?php
 	if(isset($_GET['Message'])){
 		echo $_GET['Message'];

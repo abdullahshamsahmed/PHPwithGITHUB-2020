@@ -1,3 +1,12 @@
+<?php
+	
+	session_start();
+	if(count($_COOKIE) > 0)
+	if (!isset($_SESSION['name'])&& $_SESSION['name']!="admin" )
+	{
+		header("Location:index.php");
+	}
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -12,6 +21,13 @@ table, th, td {
   text-align:center;
 }
 </style>
+<form align="center" action="" method="POST" enctype="multipart/form-data">
+	<input type="text" name="search"/>
+	<input type="submit" name="submit" value="search" />
+	<input type="submit" name="logout" value="Logout"/>
+</form> 
+	
+<br />
 	<table align="center">
 		<tr>
 			<th>ID</th>
@@ -32,7 +48,13 @@ table, th, td {
 			// include_once __DIR__. --> DIR makes the programme understand how to find the file directory without error
 			include_once __DIR__."/model/dbcon.php";
 			// pagination LIMIT data displaying
+			
 			$sql = "SELECT * FROM registration LIMIT ".$this_page_first_result.",".$results_per_page."";
+			if (isset($_POST['submit']))
+			{
+				$search = $_POST['search'];
+				$sql = "SELECT * FROM registration where name LIKE '%".$search."%' OR gender LIKE '".$search."%'OR color LIKE '".$search."%' OR city LIKE '".$search."%'  ";
+			}
 			$result = mysqli_query ($conn,$sql);
 				if (mysqli_num_rows ($result)>0)
 				{
@@ -62,7 +84,7 @@ table, th, td {
 						<td><?php echo $email;?></td>
 						<td><img src="images/<?php echo $ppic;?>" alt="image not found" height="50" width="50"/></td>
 						<td>
-							<a href="editInfo.php?name=<?php echo $name;?>">EDIT|</a>
+							<a href="editInfo.php?name=<?php echo $name;?>">EDIT  |</a>
 							<a href="controller/deleteController.php?id=<?php echo $id;?>">DELETE</a>
 						</td>
 						

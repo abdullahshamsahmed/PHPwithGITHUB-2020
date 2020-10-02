@@ -5,6 +5,10 @@
 	$sql = "SELECT * FROM registration ";
 	$result = mysqli_query($conn,$sql);
 	
+	if (isset($_POST['logout']))
+	{
+		header("Location:logout.php");
+	}	
 	if ($result)
 	{
 		$number_of_results = mysqli_num_rows($result);
@@ -12,7 +16,6 @@
 	else{
 		echo "problem";
 	}
-	
 	$page = 1;
 	//define how many results you want per page
 	$results_per_page = 2;
@@ -31,5 +34,13 @@
 	$this_page_first_result = ($page-1)*$results_per_page;
 	//retrieve selected results from database and display them on page
 	//display the links to the pages
+	$sql = "SELECT * FROM registration LIMIT ".$this_page_first_result.",".$results_per_page."";
+			if (isset($_POST['submit']))
+			{
+				$search = $_POST['search'];
+				$sql = "SELECT * FROM registration where name LIKE '%".$search."%' OR gender LIKE '".$search."%'OR color LIKE '".$search."%' OR city LIKE '".$search."%'  ";
+			}
+	
+	
 	
 ?>

@@ -1,3 +1,6 @@
+<?php
+	include_once("controller/add sessionControl.php");
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
@@ -40,7 +43,7 @@
 		<?php
 			echo"<a href='editInfo.php?name=". $WhomDetails ."'>Edit</a>";
 		?>
-		<a style="text-decoration:none" href="index.php"><<< Back...</a>
+		<a style="text-decoration:none" href="logout.php"><<< logout...</a>
 	</fieldset>
 </body>
 </html>

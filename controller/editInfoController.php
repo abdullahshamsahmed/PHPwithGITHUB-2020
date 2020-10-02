@@ -76,7 +76,7 @@
 		else
 		{
 			echo "Inserted!!!";
-			//header("refresh:100; url=../registration.php");
+			header("refresh:1; url=../all list.php");
 		}
 	}
 	
